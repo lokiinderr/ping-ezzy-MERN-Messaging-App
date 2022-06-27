@@ -2,7 +2,7 @@
 A completely working and responsive chat application based on MERN stack and socket.io for realtime communication.
 
 # Demonstration #
-https://youtu.be/2lqAq4Hh7u0
+https://youtu.be/0UjdRuWBrnk
 
 # Features #
 - Responsive website
