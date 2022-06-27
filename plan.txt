@@ -1,3 +1,6 @@
+By the time decided to host the project some of the packages had the dependency issues, some got depreciated hence werent comaptable with the newer version of node and npm, and already uploaded one of my project to heroku so decided to skip the hosting part and recorded the demonstartion and uploaded the video
+
+------------------------------------------
 Socket io read? How work, any alternative - websocket
 
 Chat app, add screenshot folder, with payment gateway, web socket io, google auth, forget password, 
