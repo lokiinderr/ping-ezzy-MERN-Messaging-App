@@ -34,4 +34,4 @@ A completely working and responsive social media application based on MERN stack
 * Images, Audio and Videos share in chat
 * Integrating Both my social networking website and chat app
 
-#Screenshots
+# Screenshots #
