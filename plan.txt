@@ -1,0 +1,91 @@
+Socket io read? How work, any alternative - websocket
+
+Chat app, add screenshot folder, with payment gateway, web socket io, google auth, forget password, 
+tried adding all those features which i missed in last project, show password, group chat, search user, 
+showing typing feature, emojis supported, notification when not opened the chats, chats are not temporary, 
+voice message images too in msgs, voice to text, 
+group chat name and member editing option- only admin can change, loading icon button feature
+
+------------------------------------------
+* can integrate both my apps
+* media can be shared through chat
+* seen feature
+* oauth feature for authentications
+* see how socket.io work, how it is different from websocket
+
+-------------------------------------------
+Problem
+* after logout and login a refresh is required when redirected to /chats page
+* automatically scroll down feature
+* notification badge
+
+-------------------------------------------
+
+* in frontend export default <name>; in backend module.exports = {}
+* since we used JWT token authorization, so in backend we pass the middleware with the route, and in the frontend we pass config variable with the axios call to any end point of the backend
+* make your function async and call them which await, use await to fetch data from DB or creating data in DB
+* with .map always use paranthesis no curly brackets in used inside map, .map((m,i)) the second parameter is the index automatically
+* we write content-type application/json when we send or recieve some json data from frontend to backend, and bearer token is used to check for authentication
+* (with axios we use await before it and for using await or function should be async)axios is used to post our data to DB asyncly from our frontend and for fetching info from backend while in frontend, and when working in backend we use asynchandler
+* in spread operator if we write (data,...array) data gets added to the starting of array
+* always console.log the data which you pass on to any var or recieve from somewhere so that we can check if its correct or not
+* server console log comes in cmd, frontend logs comes in browser 
+
+* Setup nodeJS server, "npm init" in empty folder
+* add a "start" script to package.json script file, write npm start in terminal 
+* put port inside new .env file, install dotenv package
+* npx create-react-app "name" in root folder, npm start to start react app
+* setup git in the folder, git init
+* install chakra ui, setup the provider
+* in frontend's package.json provide a proxy so that we can connect frontend and backend
+* with use of axios we fetch data from the backend to frontend (async await axios.get())
+* create schema and models with mongoose, install mongoose in root folder not in any frontend or backend
+* create login and sign up page using bootstrap/chakra ui
+* setup mongoDB atlas, add mongoURI to .env file, connect the mongoDB to express
+* setup different route endpoints in the backend, and make controllers for each endpoints
+* after successfully registering our new user we add JWT token to it
+* hash your password before saving, in the user model itself, and decrpyt the password in userControllers, authUser function
+* in login route check if user exsist and credentials also matches or not
+* add error handling APIs so that it can handle invalid endpoints error whenever anyone trys to access the routes which dont exists
+* setup the cloudinary to upload the pic uploaded by the user in signup component
+* make a loading state which will tell the button to show loading animation when things are under process
+* make submit handler function for both login and signup which will check if all the required feild are valid or not and than post them to our backend
+* setup values for guest credentials
+
+* we use query to send values to backend so that we can get the desired data, we can either use body but for that we'll need a post request
+* we use regex of mongodb to check if the query we searched is present inside our DB
+* make a middleware (authMiddleware.js) which authenticates if the user is logged in or not, by checking the JWT token provided by them
+* make all the apis in backend(add routes, add protect middleware authentication func, add controllers in userControllers) like , finding user in database, creating chat, group chat, rename chat, add/remove user
+* make all other apis endpoint for the chat api in server.js nad elaborate it in chatRoutes.js
+* for a put request where we change any field in the exisiting data in DB we write new: true line in the end where we make a change call to DB
+
+//Building UI for our chat page
+* we use contextAPI which helps us to manage the state of our app,every compnent can access a state from one place
+* in frontend src make a folder Context, wrap index.js in ChatProvider tags
+* parse the data into JSON.parse if its in stringfy format, our localStorage has data in stringfy so before storing stringfy it and before using parse it
+* we use react hook useContext to access this context APIs
+* we use "skeleton" for loading, "modal" for opening small dialouge box, drawer for side drawer,"Tabs" for making a swtiching tabs functionality,
+    "Menulist" for a drop down menu list , "Tooltip" for info display when hover on something
+* in the side drawer search field works on query, and that query is taken to db and we get results, learn that query too and a few more
+* use base and md for responsive styling, base is when screens are small
+
+* for traditional css, make a css file anywhere just import it into our component import "./styles.css"
+
+//socket.io implementation
+* npm i socket.io in root; npm i socket.io-client in frontend
+* it has different installation for server side and client side
+* in server.js setup socket.io for server side
+* in singleChat component setup for socket.io-cient is done, it is called inside useEffect hook
+* "emit" means sending the message
+* "in" means inside the room which we have created
+
+//typing... animation
+* we make 2 socket for typing and stop typing and with the help of them in the typingHandler funtion in singleChat.js we created this function
+* we used lottie package of react to display animation
+
+// notification
+* inside sidedrawer.js we'll access the notification array and make a ui accordingly for it
+* for notification we used react-notification-badge
+
+//deployment to heroku
+* chat app mern yt last video
