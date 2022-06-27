@@ -1,6 +1,8 @@
 # Ping-Ezzy MERN Chat App #
 A completely working and responsive social media application based on MERN stack.
 
+# Demonstration #
+https://youtu.be/2lqAq4Hh7u0
 
 # Features #
 - Responsive website
