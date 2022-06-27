@@ -7,6 +7,7 @@ A completely working and responsive social media application based on MERN stack
 - SignUp/SignIn Authentication
 - Real Time Chatting with Typing indicators
 - One to One chat, Group Chat
+- Guest Credential Button on login page
 - Search Users
 - Notifications
 - Add or Remove users from group - By Admin of Group
